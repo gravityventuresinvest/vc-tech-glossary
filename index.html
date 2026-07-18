@@ -527,7 +527,7 @@ document.getElementById('logoBtn').addEventListener('click', () => {
 // ── Init ──────────────────────────────────────────────────
 (async function init() {
   try {
-    const res = await fetch('./docs/tech_glossary.md');
+    const res = await fetch('./tech_glossary.md');
     if (!res.ok) throw new Error('HTTP ' + res.status);
     const raw = await res.text();
     TERMS = parseGlossary(raw);
